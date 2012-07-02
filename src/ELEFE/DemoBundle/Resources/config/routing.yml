@@ -1,0 +1,3 @@
+ELEFEDemoBundle_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: ELEFEDemoBundle:Default:index }

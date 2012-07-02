@@ -1,0 +1,7 @@
+parameters:
+#    elefe_demo.example.class: ELEFE\DemoBundle\Example
+
+services:
+#    elefe_demo.example:
+#        class: %elefe_demo.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
