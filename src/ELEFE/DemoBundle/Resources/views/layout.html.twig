@@ -1,0 +1,36 @@
+{% extends '::base.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/mdwdemo/css/main.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+{% block redes_sociales %}
+	{% set url_share = 'http://maycolalvarez.com' ~ path('articulos', {
+	    'year'  : ('now' | date('Y')),
+	    'month' : ('now' | date('m'))})
+	%}
+	<!-- Coloca esta etiqueta donde quieras que se muestre el botón +1. -->
+	<g:plusone size="medium" href="{{ url_share }}"></g:plusone>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ url_share }}" data-lang="es">Twittear</a>
+	<div class="fb-like" data-href="{{ url_share }}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="true"></div>
+{% endblock redes_sociales %}
+
+{% block body %}
+    <div id="layout">
+
+        <div id="header">
+            <h1>Encabezado</h1>
+        </div>
+        <div id="content" class="clean" >
+            <div id="content_left">
+                {% block content %}
+                {% endblock %}
+            </div>
+            <div id="content_right">
+                columna
+            </div>
+        </div>
+        <div id="footer">
+            <p>Pie {{"now"|date("m/d/Y")}}</p>
+        </div>
+    </div>
+{% endblock %}

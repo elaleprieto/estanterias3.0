@@ -1,3 +1,11 @@
 ELEFEDemoBundle_homepage:
     pattern:  /hello/{name}
     defaults: { _controller: ELEFEDemoBundle:Default:index }
+    
+articulos:
+    pattern: /articulos
+    defaults: { _controller: ELEFEDemoBundle:Default:articulos }
+
+articulo:
+    pattern: /articulo/{id}
+    defaults: { _controller: ELEFEDemoBundle:Default:articulo }
